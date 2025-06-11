@@ -1,61 +1,61 @@
-# Task Tracker Uygulaması
+# Task Tracker Application
 
-Bu proje, FastAPI backend ve Streamlit frontend kullanılarak geliştirilmiş basit bir görev takip uygulamasıdır.
+A simple task tracking application built with FastAPI backend and Streamlit frontend.
 
-## Özellikler
+## Features
 
-- Yeni görev ekleme
-- Mevcut görevleri listeleme
-- Görev silme
-- SQLite veritabanı ile kalıcı depolama
+- Add new tasks
+- List existing tasks
+- Delete tasks
+- Persistent storage with SQLite database
 
-## Teknolojiler
+## Technologies
 
 - Backend: FastAPI
 - Frontend: Streamlit
-- Veritabanı: SQLite
+- Database: SQLite
 - ORM: SQLAlchemy
 
-## Kurulum
+## Installation
 
-1. Projeyi klonlayın:
+1. Clone the project:
 ```bash
 git clone [repository-url]
 cd task-tracker
 ```
 
-2. Sanal ortam oluşturun ve aktif edin:
+2. Create and activate virtual environment:
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
 ```
 
-3. Gerekli paketleri yükleyin:
+3. Install required packages:
 ```bash
 pip install fastapi uvicorn sqlalchemy streamlit requests
 ```
 
-## Çalıştırma
+## Running the Application
 
-1. Backend sunucusunu başlatın:
+1. Start the backend server:
 ```bash
 uvicorn main:app --reload
 ```
 
-2. Yeni bir terminal açın ve frontend uygulamasını başlatın:
+2. Open a new terminal and start the frontend application:
 ```bash
 streamlit run app.py
 ```
 
-3. Tarayıcınızda aşağıdaki adreslere giderek uygulamayı kullanabilirsiniz:
+3. Access the application in your browser at:
 - Frontend: http://localhost:8501
 - Backend API: http://localhost:8000
-- API Dokümantasyonu: http://localhost:8000/docs
+- API Documentation: http://localhost:8000/docs
 
 ## API Endpoints
 
-- `GET /tasks/`: Tüm görevleri listeler
-- `POST /tasks/`: Yeni görev ekler
-- `GET /tasks/{task_id}`: Belirli bir görevi getirir
-- `DELETE /tasks/{task_id}`: Görevi siler
+- `GET /tasks/`: List all tasks
+- `POST /tasks/`: Create a new task
+- `GET /tasks/{task_id}`: Get a specific task
+- `DELETE /tasks/{task_id}`: Delete a task
 
